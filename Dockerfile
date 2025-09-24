@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src ./src
 
 # Copy default model (can be replaced at runtime via volume or /api/train)
-COPY model.pkl ./model.pkl
+COPY artifacts/model.pkl ./model.pkl
 
 # (Optional) Copy data directory if present
 # COPY data ./data
