@@ -7,6 +7,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -48,9 +52,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build image
+      - name: Build image and push
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: false
-          tags: demo1:ci
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
