@@ -11,3 +11,13 @@ El repositorio incluye un **modelo inicial** en la carpeta `artifacts/model.pkl`
   ```bash
   curl -X POST http://127.0.0.1:8080/api/train -H "Content-Type: application/json" -d '{}'
   ```
+
+
+
+## Evidencias
+
+# Ejecucion CI/CD
+
+A continuación se presenta un pantallazo del job ejecutado OK.
+
+![Hola](img/captura-1.png "a title")
